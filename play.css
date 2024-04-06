@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;400;700&family=Marcellus+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,600;0,900;1,900&display=swap');
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #d2b48c; /* Tan/Light Brown */
+    color: #333;
+    font-family: 'agency fb';
+    overflow: hidden;
+}
+
+.stripes {
+    position: fixed;
+    width: 100%;
+}
+
+.s-one {
+    position: absolute;
+    width: .5px;
+    height: 100vh;
+    background: #555555;
+    left: 4%;
+}
+
+.s-two {
+    position: absolute;
+    width: .5px;
+    height: 100vh;
+    background: #555555;
+    left: 50%;
+}
+
+.s-three {
+    position: absolute;
+    width: .5px;
+    height: 100vh;
+    background: #555555;
+    left: 96%;
+}
+
+.bg-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: .3;
+}
+
+.bg-text h1 {
+    font-size: 300px;
+    font-family: 'poppins', sans-serif;
+    text-align: center;
+    color: transparent;
+    -webkit-text-stroke: 3px #444;
+    text-transform: uppercase;
+}
+
+.img img {
+    width: 67%;
+    opacity: 0;
+}
+
+.img {
+    position: fixed;
+    z-index: 1;
+    top: 10%;
+    right: -444px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 30px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.navbar .media li {
+    display: inline-block;
+    padding-left: 30px;
+}
+
+.navbar .media li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navbar .menu i {
+    padding-right: 20px;
+}
+
+.watchnow {
+    position: relative;
+    top: 55%;
+    right: 12%;
+    transform: translateY(-40%);
+    z-index: 2;
+    background: #bb0000;
+    padding: 10px 30px 10px 30px;
+    border-radius: 30px;
+    align-items: center;
+}
+
+.watchnow a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 1px;
+}
+
+.fa-play {
+    color: #fff;
+    font-size: 30px;
+    margin-right: 15px;
+}
+
+.bottomnav {
+    position: absolute;
+    bottom: 22%;
+    right: 55%;
+    z-index: 1;
+}
+
+.bottomnav ul {
+    list-style: none;
+}
+
+.bottomnav ul li {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 20px 20px 20px 0;
+    color: #fff;
+    background: #2a2a2a;
+}
+
+.blocks {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    font-size: 100px;
+    color: #fff;
+    font-weight: 600;
+    color: #fff;
+    z-index: 1;
+}
+
+.blocks .block-1::after{
+    content: ">>";
+    color: #E4DCCF;
+    width: 0px;
+    height: 0px;
+    display: inline-block;
+}
+
+.blocks .block-2::after{
+    content: ">>";
+    color: #E4DCCF;
+    width: 0px;
+    height: 0px;
+    display: inline-block;
+}
+
+.blocks .block-3::after{
+    content: ">>";
+    color: #E4DCCF;
+    width: 0px;
+    height: 0px;
+    display: inline-block;
+}
+
+
+.blocks .block-4::after{
+    content: ">>";
+    color: #E4DCCF;
+    width: 0px;
+    height: 0px;
+    display: inline-block;
+}
+
+.block-1:hover{
+    translate: 7px;
+    transition: ease-in-out all 0.4s;
+    text-decoration: underline 0.04em #fff;
+  text-underline-offset: 0.2em;
+}
+
+.block-2:hover{
+    translate: 7px;
+    transition: ease-in-out all 0.4s;
+    text-decoration: underline 0.04em rgb(204, 22, 22);
+  text-underline-offset: 0.2em;
+}
+
+.block-3:hover{
+    translate: 7px;
+    transition: ease-in-out all 0.4s;
+    text-decoration: underline 0.04em rgb(204, 22, 22);
+  text-underline-offset: 0.2em;
+    
+}
+
+.block-4:hover{
+    translate: 7px;
+    transition: ease-in-out all 0.4s;
+    text-decoration: underline 0.04em #fff;
+  text-underline-offset: 0.2em;
+}
+
+
+.block-1,
+.block-4 {
+    color: #bb0000;
+    z-index: 1 d DZ;
+}
+
+.blocks {
+    font-size: 6vw; /* Adjust font size based on viewport width */
+}
+
+/* Adjust watchnow button position for smaller screens */
+.watchnow {
+    right: 5%;
+    top: 85%; /* Adjust vertical position */
+    transform: translateY(-50%);
+}
+
+/* Adjust bottomnav position for smaller screens */
+.bottomnav {
+    bottom: 10%;
+    right: 5%;
+}
+
+/* Make stripes responsive */
+.stripes .s-one,
+.stripes .s-two,
+.stripes .s-three {
+    height: 100%;
+}
+
+.backHome{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    z-index: 999;
+}
+
+.backHome:hover{
+    transform: translate(0,-2px);
+}
+
+@media only screen and (max-width: 992px) {
+    /* Adjust block font size for smaller screens */
+    .blocks {
+        font-size: 8vw;
+    }
+
+    /* Adjust watchnow button position for smaller screens */
+    .watchnow {
+        right: 5%;
+        top: 75%;
+    }
+
+    /* Adjust bottomnav position for smaller screens */
+    .bottomnav {
+        bottom: 5%;
+        right: 5%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* Adjust block font size for smaller screens */
+    .blocks {
+        font-size: 10vw;
+    }
+
+    /* Adjust watchnow button position for smaller screens */
+    .watchnow {
+        right: 5%;
+        top: 65%;
+    }
+
+    /* Adjust bottomnav position for smaller screens */
+    .bottomnav {
+        bottom: 2%;
+        right: 5%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    /* Adjust block font size for smaller screens */
+    .blocks {
+        font-size: 14vw;
+    }
+
+    /* Adjust watchnow button position for smaller screens */
+    .watchnow {
+        right: 5%;
+        top: 55%;
+    }
+
+    /* Adjust bottomnav position for smaller screens */
+    .bottomnav {
+        bottom: 2%;
+        right: 5%;
+    }
+}

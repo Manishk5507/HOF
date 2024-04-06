@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="coderell" content="width=device-width, initial-scale=1.0" />
+    <title>Sound</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="profile.css" />
+    <!-- google font  -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:500,600,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Tweenmax GSAP  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="overlay first"></div>
+      <div class="overlay second"></div>
+      <div class="overlay third"></div>
+
+      <!-- <div class="nav">
+            <div class="login"><a href="signIn.html">LogIn</a></div>
+            <div class="break">|</div>
+            <div class="login"><a href="signUp.html">SignUp</a></div>
+        </div> -->
+
+      <div class="nav">
+        <div class="logo">
+          <a href="#" id="profile-icon"
+            ><img src="profile-user.png" alt="" height="40px" width="40px"
+          /></a>
+        </div>
+        <div class="user"></div>
+      </div>
+
+      <div class="sub-bar" id="sub-bar">
+        <a href=""><p>User Profile</p></a>
+        <br />
+        <button id="logout-button">Logout</button>
+      </div>
+
+      <img src="gu.png" alt="" class="product-img" />
+
+      <div class="product-text">
+        <h1 class="product-title">Are you ready?</h1>
+      </div>
+
+      <div class="product-desc">
+        <p>Ready to get AI sound feel</p>
+        <button>
+          <a href="play.html" style="text-decoration: none">Let's Play</a>
+        </button>
+      </div>
+
+      <div class="media">
+        <ul>
+          <li><i class="fa fa-facebook"></i></li>
+          <li><i class="fa fa-instagram"></i></li>
+          <li><i class="fa fa-twitter"></i></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="user"></div>
+
+    <script>
+      // Function to hide the sub bar initially
+      function hideSubBar() {
+        var subBar = document.getElementById("sub-bar");
+        subBar.style.display = "none";
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        hideSubBar(); // Call hideSubBar function when the DOM is loaded
+      });
+
+      document
+        .getElementById("profile-icon")
+        .addEventListener("click", function () {
+          var subBar = document.getElementById("sub-bar");
+          if (subBar.style.display === "none" || subBar.style.display === "") {
+            subBar.style.display = "block";
+          } else {
+            subBar.style.display = "none";
+          }
+        });
+    </script>
+
+    <script>
+      const user = document.querySelector(".user");
+      const username = localStorage.getItem("username");
+
+      user.innerHTML = "Welcome, " + username;
+
+      function logout() {
+        // Clear token from local storage
+        localStorage.removeItem("token");
+
+        window.alert("Logout Successfully");
+
+        // Redirect to login page or any other appropriate action
+        window.location.href = "./index.html"; // Assuming '/login' is your login page URL
+      }
+
+      // Attach click event listener to logout button
+      document
+        .getElementById("logout-button")
+        .addEventListener("click", function (event) {
+          logout(); // Call logout function
+        });
+    </script>
+
+    <script>
+      TweenMax.to(".first", 1.5, {
+        delay: 0.2,
+        left: "-100%",
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.to(".second", 1.5, {
+        delay: 0.4,
+        left: "-100%",
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.to(".third", 1.5, {
+        delay: 0.6,
+        left: "-100%",
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".logo", 1, {
+        delay: 1,
+        opacity: 0,
+        x: -20,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.from(".menu", 1, {
+        delay: 1.2,
+        opacity: 0,
+        x: -20,
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".search", 0.8, {
+        delay: 1.6,
+        opacity: 0,
+        x: -20,
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".bag", 1, {
+        delay: 1.6,
+        opacity: 0,
+        x: -20,
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.staggerFrom(
+        ".media ul li",
+        1,
+        {
+          delay: 2,
+          opacity: 0,
+          x: -20,
+          ease: Power3.easeInOut,
+        },
+        0.08
+      );
+
+      TweenMax.from(".size", 1, {
+        delay: 1.8,
+        opacity: 0,
+        x: -20,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.staggerFrom(
+        ".size ul li",
+        0.3,
+        {
+          delay: 2,
+          opacity: 0,
+          y: 20,
+          ease: Power3.easeInOut,
+        },
+        0.08
+      );
+      TweenMax.from(".bottom-right ul li:first-child", 0.5, {
+        delay: 2.4,
+        opacity: 0,
+        x: -20,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.from(".bottom-right ul li:last-child", 0.6, {
+        delay: 2.4,
+        opacity: 0,
+        x: -20,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.from(".bottom-img", 1, {
+        delay: 2.4,
+        opacity: 0,
+        x: -20,
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".product-title", 3, {
+        delay: 2.2,
+        opacity: 0,
+        y: 50,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.from(".product-img", 1, {
+        delay: 4.2,
+        opacity: 0,
+        y: -800,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.from(".product-desc p", 3, {
+        delay: 3,
+        opacity: 0,
+        y: -50,
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".nav", 3, {
+        delay: 3,
+        opacity: 0,
+        y: -50,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.from(".product-desc button", 3, {
+        delay: 4,
+        opacity: 0,
+        y: -50,
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.to(".sub-bar", 1.5, {
+        delay: 0.2,
+        right: "10%",
+        top: "15%",
+        ease: Expo.easeInOut,
+      });
+    </script>
+  </body>
+</html>
