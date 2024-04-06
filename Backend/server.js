@@ -6,8 +6,8 @@ const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 var expressSession = require("express-session");
-var jwt_decode = require('jwt-decode');
 
+require("dotenv").config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -41,7 +41,7 @@ app.use((req, res, next) => {
   });
 
 // MongoDB connection
-mongoose.connect('mongodb://localhost:27017/signup', {
+mongoose.connect(`mongodb+srv://7055ranamanish:${process.env.password}@harmoniandata.ev2yfkl.mongodb.net/`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
