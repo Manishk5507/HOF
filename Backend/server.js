@@ -25,7 +25,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 app.use(cors({
-  origin: 'https://harmonic-gesture.vercel.app', // Allow requests from any origin
+  origin: ['https://harmonic-gesture.vercel.app'], // Allow requests from any origin
   credentials: true, // Allow cookies to be sent and received from the client-side
 }));
 
