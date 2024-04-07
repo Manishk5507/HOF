@@ -11,10 +11,11 @@ document
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          
         },
         body: JSON.stringify({ username, email, password }),
       });
-      console.log(response)
+      // console.log(response)
 
       const data = await response.json();
       localStorage.setItem("username",data.user);
@@ -22,7 +23,7 @@ document
       localStorage.setItem('email', data.email);
 
       // Redirect to profile page after successful signup
-      // window.location.href = "./profile.html"; // Assuming profile.html is your profile page
+      window.location.href = "./profile.html"; // Assuming profile.html is your profile page
     } catch (error) {
       console.error("Error:", error);
       document.getElementById("error").innerText =
